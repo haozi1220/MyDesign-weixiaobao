@@ -1,0 +1,193 @@
+@charset "UTF-8";
+/**
+ * 
+ * @authors Your Name (you@example.org)
+ * @date    2016-10-23 16:52:03
+ * @version $Id$
+ */
+body,html,
+.wrap{
+    height: 100% ;
+    width: 100% ;
+    padding: 0 ;
+}
+.header{
+    padding: 0;
+    position: relative;
+
+}
+.navbar-inverse{
+    height: 74px ;
+    background: none ;
+    border-bottom: none;
+    color: #ccc;
+}
+.navbar-header{
+    position: fixed;
+    left: 50px ;
+    top: 0px ;
+}
+.words{
+    float: left;
+    position: fixed;
+    top: 40px ;
+    left: 256px ;
+}
+.menu{
+    margin:36px 0 0 120px;
+    text-align: center;
+}
+.menu li{
+    font-family: "微软雅黑" Arial ;
+    display: inline-block;
+    padding: 0 5px ;
+    margin: 0 12px ;
+    font-size: 20px ;
+}
+.menu  a{
+    color: #cfcfcf ;
+    cursor: pointer;
+    letter-spacing: 2px ;
+}
+.hotline{
+    position: fixed;
+    right: 90px ;
+    top: 30px ;
+}
+.hotline span{
+    display: inline-block;
+    width: 30px ;
+    height: 30px ;
+    background: url(../images/icons.png) 0 0;
+    background-position: 0 0 ;
+}
+.hotline a{
+    display: inline-block;
+    font: 26px/30px Arial ;
+    font-weight: bold ;
+    height: 30px ;
+    letter-spacing: 1px ;
+    color: #00dfb9 ;
+}
+.header a:hover{
+    text-decoration: none;
+}
+.menu-icon{
+    position: fixed;
+    right: 0 ;
+    top: 18px ;
+}
+
+/*第一屏样式*/
+.video,
+.swiper-container,
+.swiper-wrapper,
+.swiper-side{
+    height: 100% ;
+}
+.video{
+    overflow: hidden;
+    position: relative;
+}
+.swiper-container{
+    width: 100% ;
+    margin: 0 auto ;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+    backface-visibility: hidden;
+}
+/*****************第一屏样式*****************/
+/*轮播图样式*/
+.carousel,
+.carousel-inner,
+.item{
+    height: 100% ;
+}
+.nth1{
+    background:#000 url(../images/wallpaper1_1.jpg) repeat scroll 50% 35% / cover;
+}
+.nth2{
+    background:#000 url(../images/wallpaper1_2.jpg) repeat scroll 50% 20% / cover;
+}
+.nth3{
+    background:#000 url(../images/wallpaper1_3.jpg) repeat scroll 50% center / cover;
+}
+.nth4{
+    background:#000 url(../images/wallpaper1_4.jpg) repeat scroll 50% top / cover;
+}
+/*内容样式*/
+.box{
+    position: fixed;
+    top: 40% ;
+    font-size: 50px ;
+    text-align: center;
+    position: relative;
+}
+.box b{
+    color: #fff ;
+    font-size: 58px ;
+    line-height: 250% ;
+}
+.box p{
+    color: #ccc ;
+    font-size: 36px ;
+    line-height: 100% ;
+}
+.box .top{
+    font-size: 36px ;
+    color: #fff ;
+    text-align: center;
+}
+/*.box .midBox{
+    transform: scaleX(2);
+    transition: 2s;
+}*/
+.box .mid{
+    width: 358px ;
+    height: 66px; 
+    margin: 20px auto 10px ;
+}
+.box .bottom{
+    font-size: 16px ;
+    color: #ccc ;
+    line-height: 30px ;
+    width: 100% ;
+}
+.nth2 .box .mid{
+    background: url(../images/words.png) no-repeat scroll 20px -74px;
+}
+.nth3 .box .mid{
+    background: url(../images/words.png) no-repeat scroll 0 -219px;
+}
+.nth4 .box .mid{
+    background: url(../images/words.png) no-repeat scroll 70px -144px;
+}
+/*******第一屏内容动画********/
+@keyframes topAni{
+    0%{
+        opacity: 0 ;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+@keyframes midBox{
+    from
+    {
+        transform: scaleX(2);
+        opacity: 0;
+    }
+    to
+    {
+        transform: scaleX(1); 
+        opacity: 1;
+    }
+    
+}
+.animated{
+    animation:topAni 2s linear ;
+}
+.scaleA{
+    animation:midBox 1s linear ;
+}
